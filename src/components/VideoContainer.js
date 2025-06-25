@@ -3,6 +3,7 @@ import {YOUTUBE_API_1, YOUTUBE_API_2 } from '../utils/constants';
 import VideoCard from './VideoCard';
 import { useSelector } from 'react-redux';
 import { Link } from 'react-router';
+import HomeShimmer from './HomeShimmer';
 
 const VideoContainer = () => {
   const [videos,setVideos]=useState(null);
@@ -17,7 +18,7 @@ const VideoContainer = () => {
     const json=await data.json();
     setVideos(json.items);
   }
-  if(videos==null) return <div>hiii</div>
+  if(videos==null) return <HomeShimmer/>
   return (
     <div className='px-10'>
       <div className='flex flex-wrap '>

@@ -4,7 +4,7 @@ const appSlice=createSlice({
     name:'app',
     initialState:{
         isMenuOpen: false,
-        tag:'Cars PuravJha Standup IPL',
+        tag:'All+standups',
     },
     reducers:{
         toggleMenu:(state)=>{
