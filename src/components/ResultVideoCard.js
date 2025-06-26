@@ -1,11 +1,13 @@
 import { formatDistanceToNow, parseISO } from 'date-fns';
+import { BsBroadcast } from "react-icons/bs";
+
 
 
 
 
 const ResultVideoCard = ({info}) => {
     
-  let {channelTitle,title,thumbnails,publishTime}=info.snippet;
+  let {channelTitle,title,thumbnails,publishTime,liveBroadcastContent}=info.snippet;
   title=title.replaceAll("&#39;", "'");
   title=title.replaceAll("&quot;", '"');
   title=title.replaceAll("&amp;", "&");
@@ -21,7 +23,9 @@ const ResultVideoCard = ({info}) => {
             <li className='text-lg font-semibold line-clamp-2 text-ellipsis overflow-hidden'>{title}</li>
             <li className='text-[#989897] text-md mt-3'>{channelTitle}</li>
             <li className='text-[#a3a3a1] text-md '>{result}</li>
+            {liveBroadcastContent==='live'?<div className='h-7 mt-2 w-14 flex justify-center bg-red-600 gap-1 rounded-lg text-center'><BsBroadcast className='mt-1.5'/>Live</div>:''}
         </ul>
+        
     </div>
   )
 }

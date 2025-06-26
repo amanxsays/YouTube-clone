@@ -22,8 +22,8 @@ const Sidebar = () => {
   }
   if(!isMenuOpen) return null;
   return (
-    <div >
-    <div className='bg-[#0f0f0f] px-4 z-10 absolute h-screen'>
+    <div>
+    <div className='bg-[#0f0f0f] px-4 z-10 absolute min-h-[95%]'>
         <ul>
             <li ><Link to='/'><button className='py-2.5 px-3 w-[180px] flex gap-7 items-center focus:bg-[#2d2d2d] hover:bg-[#2d2d2d] rounded-lg '><IoMdHome className='scale-150'/>Home</button></Link></li>
             <li ><button className='py-2.5 px-3 w-[180px] flex gap-7 items-center focus:bg-[#2d2d2d] hover:bg-[#2d2d2d] rounded-lg '><SiYoutubeshorts className='scale-150'/>Shots</button></li>
@@ -41,7 +41,7 @@ const Sidebar = () => {
             <li ><button className='py-2.5 px-3 w-[180px] flex gap-7 items-center focus:bg-[#2d2d2d] hover:bg-[#2d2d2d] rounded-lg '><LiaDownloadSolid className='scale-[180%]'/>Downloads</button></li>
         </ul>
     </div>
-    <div class="absolute z-10 top-0 left-[35vh] w-[174vh] h-[115.5%] bg-[#00000071] cursor-pointer" onClick={()=>handleClick()}></div>
+    <div class="absolute z-10 top-0 left-[35vh] w-[174vh] min-h-full bg-[#00000071] cursor-pointer" onClick={()=>handleClick()}></div>
     </div>
   )
 }

@@ -1,6 +1,7 @@
-const key='AIzaSyCxbrbQ96leZ8tnYdNIXCAAaaJk6oDLsio';
-//AIzaSyCxbrbQ96leZ8tnYdNIXCAAaaJk6oDLsio
+const key='AIzaSyCPqx8Jg3jOIEancRMl_OlebivQk-UnMrc';
+//AIzaSyBdDXqzaT9AS5zbLbRuvYzCQ-Z2p4JNG8o
 //AIzaSyD33jl44_Ck4wswIaRoHlkYz8oLZvLVq6s
+//AIzaSyCPqx8Jg3jOIEancRMl_OlebivQk-UnMrc
 
 export const YOUTUBE_API_1=`https://www.googleapis.com/youtube/v3/search?key=${key}&q=`;
 export const YOUTUBE_API_2=`&type=video&part=snippet&maxResults=16`;

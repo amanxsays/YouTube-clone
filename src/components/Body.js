@@ -6,7 +6,7 @@ const Body = () => {
   return (
     <div className="bg-[#0f0f0f] min-h-screen text-[#fff]">
       <Header />
-      <div className='flex'>
+      <div className='relative flex pt-[10vh]'>
         <Sidebar/>
         <Outlet/>
       </div>

@@ -40,7 +40,7 @@ const Header = () => {
   }
 
   return (
-    <div className="grid grid-flow-col text-center px-2">
+    <div className="grid grid-flow-col text-center px-2 fixed bg-[#111111f6] filter w-full h-[70px] z-10 ">
       <div className="flex">
         <RxHamburgerMenu
           className="h-16 mt-2 ml-4 cursor-pointer w-5"
