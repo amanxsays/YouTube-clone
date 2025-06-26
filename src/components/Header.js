@@ -6,10 +6,16 @@ import { YOUTUBE_SEARCH_API } from "../utils/constants";
 import { useEffect, useState } from "react";
 import {cacheResults} from '../utils/searchSlice';
 import { Link } from "react-router";
+import useOnlineStatus from "../utils/useOnlineStatus";
+import LoginPage from "./LoginPage";
+import { FaRegCircleUser } from "react-icons/fa6";
 
 
 
 const Header = () => {
+  const status = useOnlineStatus();
+  const [logBtn, setLogBtn] = useState(localStorage.getItem("username")?localStorage.getItem("username"):"Login"); 
+  const [show,setShow]=useState(false);
   const dispatch = useDispatch();
   const toggleMenuHandler = () => {
     dispatch(toggleMenu());
@@ -70,13 +76,17 @@ const Header = () => {
         </ul>}
         </div>
       </div>
-      <div className="pt-4 ml-60">
-        <img
-          alt="user"
-          src="https://imgs.search.brave.com/olxoMwph5cIqsopEnW7NIj6A4Knee2cqhdRtif2C59Q/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jZG4z/Lmljb25maW5kZXIu/Y29tL2RhdGEvaWNv/bnMvd2ViLXVpLTMv/MTI4L0FjY291bnQt/Mi0xMjgucG5n"
-          className="h-10"
-        ></img>
+      <div className="pt-4 ml-40">
+        <div className="bg-[#343433] rounded-lg p-2">
+            <button className="SearchBtn flex items-center pl-4 gap-2" onClick={()=>{
+              setShow(!show);
+            }}>
+              <FaRegCircleUser />{logBtn}
+            </button>
+          </div>
       </div>
+      <LoginPage setLogBtn={setLogBtn} show={show} setShow={setShow}/>
+    {status!=true?<div className="status">OFFLINE</div>:""}
     </div>
   );
 };

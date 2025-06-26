@@ -3,6 +3,7 @@ import { useSearchParams } from "react-router-dom";
 import { COMMENTS_API_1, COMMENTS_API_2 } from "../utils/constants";
 import CommentBox from "./CommentBox";
 import ShimmerCard from "./ShimmerCard";
+import LiveChatPage from "./LiveChatPage";
 
 const WatchPage = () => {
   const [searchParams] = useSearchParams();
@@ -25,7 +26,7 @@ const WatchPage = () => {
     );
   return (
     <div>
-      <div className="pl-20 pt-4">
+      <div className="pl-20 pt-4 flex">
         <iframe
           className="rounded-2xl"
           width="690"
@@ -38,6 +39,7 @@ const WatchPage = () => {
           referrerPolicy="strict-origin-when-cross-origin"
           allowFullScreen
         ></iframe>
+        <LiveChatPage/>
       </div>
       <CommentBox comments={comments} />
     </div>
