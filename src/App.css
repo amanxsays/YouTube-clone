@@ -3,7 +3,7 @@
 @tailwind utilities;
 .shimmerCard{
     background-color: #242424;
-    animation: shim 1.4s linear infinite;
+    animation: shim 1s linear infinite;
 }
 @keyframes shim {
     0%{
