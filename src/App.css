@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+.shimmerCard{
+    background-color: #242424;
+    animation: shim 1s linear infinite;
+}
+@keyframes shim {
+    0%{
+        opacity:1;
+    }
+    50%{
+        opacity:0.5;
+
+    }
+    100%{
+        opacity:1;
+    }
+}
