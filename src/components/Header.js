@@ -39,6 +39,8 @@ const Header = () => {
   const getSearchSuggetsions = async () => {
     const data = await fetch(YOUTUBE_SEARCH_API +tag);
     const json = await data.json();
+    console.log(json);
+    
     setSearchList(json[1]);
     dispatch(cacheResults({
       [tag]: json[1],
